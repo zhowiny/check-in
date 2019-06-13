@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "check-in",
 	"description": "mini program for check in ",
-	"appid": "wxa91d16a5df2e17c8",
+	"appid": "wx0329e32019134b56",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,

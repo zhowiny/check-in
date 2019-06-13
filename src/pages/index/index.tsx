@@ -36,20 +36,32 @@ export default class Index extends Component {
     this.setState({show: true})
   }
   onConfirm (e) {
-    console.log(e, 'comfirm')
+    // do something...
+    this.close(e)
   }
   onCancel (e) {
-    console.log(e, 'onCancel')
+    // do something...
+    this.close(e)
+  }
+  close (e) {
+    console.log(e)
+    this.setState({show: false})
   }
 
   render () {
     return (
       <View className='index'>
         <Text>Hello world!</Text>
-        <View onClick={() => this.open()}  style={{width: '200px', height: '200px', backgroundColor: '#aaf'}}>
-          <MxButton type='primary' >open dialog</MxButton>
+        <View style={{width: '200px', height: '200px', backgroundColor: '#aaf'}}>
+          <MxButton onClick={() => this.open()} className='btn' type='primary' >open dialog</MxButton>
         </View>
-        <MxDialog title='哈哈哈' show={this.state.show} onConfirm={this.onConfirm} onCancel={this.onCancel}>
+        <MxDialog
+          closeOnClickMask
+          className='dialog' title='哈哈哈'
+          show={this.state.show}
+          onConfirm={this.onConfirm.bind(this)}
+          onCancel={this.onCancel.bind(this)}
+        >
           <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at cupiditate dolor dolores ducimus est expedita explicabo facere illum, labore maxime porro quam quia quis quisquam quod reiciendis veritatis.</Text>
         </MxDialog>
       </View>

@@ -48,7 +48,7 @@
     content: '';
     border: none;
   }
-  &.button--default {
+  &--default {
     color: #606266;
     background: #fff;
     &.hover {
@@ -67,37 +67,37 @@
       border-color: #ebeef5;
     }
   }
-  &.button--primary {
+  &--primary {
     @include button-style();
   }
-  &.button--success {
+  &--success {
     @include button-style(#67c23a);
   }
-  &.button--info {
+  &--info {
     @include button-style(#909399);
   }
-  &.button--warning {
+  &--warning {
     @include button-style(#e6a23c);
   }
-  &.button--danger {
+  &--danger {
     @include button-style(#f56c6c);
   }
   &.is-round {
     border-radius: 50px;
   }
-  &.button--medium {
+  &--medium {
     display:inline-flex;
     font-size: 30px;
     padding: 17px $big-space;
     width:auto;
   }
-  &.button--small {
+  &--small {
     display:inline-flex;
     font-size: 26px;
     padding: 16px $middle-space;
     width:auto;
   }
-  &.button--mini {
+  &--mini {
     display:inline-flex;
     font-size: 24px;
     padding: $small-space $middle-space;

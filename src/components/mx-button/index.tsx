@@ -22,6 +22,10 @@ interface ButtonProps {
 }
 
 export default class MxButton extends Taro.Component<ButtonProps, {}> {
+  static options = {
+    addGlobalClass: true
+  }
+
   defaultProps = {
     type: 'default',
     className: '',
@@ -51,8 +55,8 @@ export default class MxButton extends Taro.Component<ButtonProps, {}> {
     const {className, openType, loading, type, size, disabled, round, plain} = this.props
     let classList = ['mx-button']
     className && classList.push(...className.split(' '))
-    classList.push(`button--${type}`)
-    size && classList.push(`button--${size}`)
+    classList.push(`mx-button--${type}`)
+    size && classList.push(`mx-button--${size}`)
     disabled && classList.push(`is-disabled`)
     round && classList.push(`is-round`)
     plain && classList.push(`is-plain`)
