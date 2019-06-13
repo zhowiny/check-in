@@ -1,0 +1,42 @@
+@import "../../common/variable";
+
+.mx-dialog {
+  &--mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include size(100vw, 100vh);
+    background: rgba(#000, .5);
+    z-index: 100;
+    //opacity: 0;
+    &.actived {
+      opacity: 1;
+    }
+  }
+
+  &--container {
+    @include center(50%, 40%);
+    z-index: 101;
+    @include size(70vw, auto);
+    background: #fff;
+    border-radius: $default-border-radius;
+    overflow-x:hidden;
+  }
+  &--title {
+    text-align: center;
+    color: $deepColor;
+    font-size: 40px;
+    padding:$small-space 0;
+  }
+  &--context {
+    padding: 0 $middle-space;
+    font-size: 28px;
+  }
+  &--footer {
+    margin-top: $middle-space;
+    display: flex;
+    mx-button {
+      flex: 1;
+    }
+  }
+}
